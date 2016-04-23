@@ -2,6 +2,7 @@
 
 <h2> Variables <h2>
 
+<h6>
 Data from downloaded files:
 * X_train
 * X_test
@@ -81,3 +82,4 @@ Names in Data:
 [68] "activity"    
 
 Data2 contains an aggregation of subject and activity
+<h6>
