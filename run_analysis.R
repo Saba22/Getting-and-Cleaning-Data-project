@@ -1,3 +1,4 @@
+## read files into data tables
 > dataActivityTest <- read.table("Y_test.txt", header = FALSE)
 > dataActivityTrain <- read.table("Y_train.txt", header = FALSE)
 > dataSubjectTrain <- read.table("subject_train.txt", header = FALSE)
@@ -5,9 +6,12 @@
 > dataFeaturesTest <- read.table("X_test.txt", header = FALSE)
 > dataFeaturesTrain <- read.table("X_train.txt", header = FALSE)
 
+## merge by row binding Activity and Subject data
 > dataSubject <- rbind(dataSubjectTrain, dataSubjectTest)
 > dataActivity <- rbind(dataActivityTrain, dataActivityTest)
 > dataFeatures <- rbind(dataFeaturesTrain, dataFeaturesTest)
+
+## rename "subject" and "activity" variables
 > names(dataSubject) <- c("subject")
 > names(dataActivity) <- c("activity")
 > dataFeaturesNames <- read.table("features.txt", header = FALSE)
@@ -20,6 +24,7 @@
 
 > activityLabels <- read.table("activity_labels.txt", header = FALSE)
 
+## factorize activity and subject
 > Data$activity <- factor(Data$activity)
 > Data$activity <- factor(Data$activity, labels = as.character(activityLabels$V2))
 
