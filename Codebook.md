@@ -1,13 +1,14 @@
 <h1> Code Book <h1>
 
 <h2> Variables <h2>
+
 Data from downloaded files:
-X_train
-X_test
-Y_train
-Y_test
-subject_train
-subject_test
+* X_train
+* X_test
+* Y_train
+* Y_test
+* subject_train
+* subject_test
 
 Names in Data:
 [1] "timeBodyAccelerometer-mean()-X"                
